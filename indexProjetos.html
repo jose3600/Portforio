@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  <!-- jQuery + Popper + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0b2342; /* Fundo azul escuro */
+      font-family: Arial, sans-serif;
+      color: #111;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1b1b1b; /* Navbar escura */
+      padding: 10px 1rem;
+      color: white;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav.navbar a,
+    nav.navbar button {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav.navbar a:hover,
+    nav.navbar button:hover {
+      color: #00ffff;
+      transform: scale(1.05);
+    }
+
+    .container-lado-a-lado {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 30px;
+      margin-top: 90px; /* compensar header fixo */
+      background-color: white;
+      color: #111;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .lado.imagem,
+    .lado.texto {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .imagem-personalizada {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border: 2px solid #0b2342;
+    }
+
+    .linha-vertical {
+      width: 2px;
+      height: 250px;
+      background-color: #0b2342;
+      border: none;
+    }
+
+    /* Ajusta o carrossel para não ultrapassar o tamanho do container */
+    .carousel {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    span {
+      transition: all 0.3s;
+      color: #e11d48;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="indexHome.html"><i class="fas fa-home"></i> Voltar</a>
+      <button onclick="mostrarAlerta()"><i class="fas fa-project-diagram"></i> <strong>Projetos</strong></button>
+    </nav>
+  </header>
+
+  <!-- Container lado a lado -->
+  <section class="home">
+    <div class="container-lado-a-lado">
+
+      <!-- Carrossel -->
+     
+        <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="1.jpg.png" alt="First slide" />
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="2.jpg.png" alt="Second slide" />
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="3.jpg.png" alt="Third slide" />
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./img/5.jpg.png" alt="Third slide" />
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+           
+        <h1></h1>
+        <p>
+          Um dos meus Projetos aborda um tema delicado e de extrema importância: a segurança de pessoas que ficam presas em automóveis...
+          seja em carros ou até mesmo em ônibus. Nosso projeto tem como objetivo prevenir tragédias relacionadas a essa situação, oferecendo uma solução inovadora e eficiente.
+          O nosso sistema é composto por um conjunto integrado de sensores e um site de monitoramento. Ele utiliza um sistema de ventilação associado a sensores que detectam a presença de pessoas dentro do veículo. Os principais componentes do nosso sistema são:
+          <br /><br />
+          Sensores de Movimento: Estes sensores detectam qualquer movimento dentro do veículo, identificando a presença de pessoas ou animais e ativando o sistema de ventilação automaticamente.
+          <br /><br />
+          Sensores de Peso: Instalados nos assentos, esses sensores identificam quando há alguém sentado, garantindo que o sistema de ventilação seja acionado mesmo na ausência de movimento detectável, como no caso de uma criança dormindo.
+          <br /><br />
+          Sensores de Calor: Monitoram a temperatura interna do veículo e ativam o sistema de ventilação quando a temperatura ultrapassa um limite seguro, evitando situações de superaquecimento que podem ser fatais.
+          <br /><br />
+          <div>
+
+          
+          Nosso projeto também inclui um site que auxilia os proprietários dos veículos a monitorar o estado do sistema de ventilação em tempo real. O site permite que os usuários registrem seu veículo informando a placa e o modelo. Após o cadastro, todas as informações necessárias sobre o funcionamento do sistema de ventilação são transmitidas automaticamente e podem ser acessadas pelo usuário. Além disso, o site envia alertas e notificações sobre o status do veículo, garantindo que o proprietário esteja sempre informado sobre a segurança e o conforto dos ocupantes do veículo.</div>
+          <br /><br />
+          Com essa abordagem integrada de tecnologia e monitoramento, nosso projeto visa salvar vidas e proporcionar tranquilidade aos proprietários de veículos, sabendo que seus entes queridos e animais de estimação estão sempre seguros.
+        </p>
+      </div>
+        </div>
+      </div>
+
+      <hr class="linha-vertical" />
+
+      <!-- Texto -->
+     
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const titulo = "Projeto";
+      let i = 0;
+      const elemento = document.querySelector("h1");
+      elemento.textContent = "";
+
+      function digitar() {
+        if (i < titulo.length) {
+          elemento.textContent += titulo.charAt(i);
+          i++;
+          setTimeout(digitar, 100);
+        }
+      }
+      digitar();
+
+      const paragrafo = document.querySelector(".lado.texto p");
+      const palavras = ["JavaScript", "programação", "projetos", "HTML", "CSS", "desenvolvimento"];
+      let texto = paragrafo.innerHTML;
+
+      palavras.forEach((palavra) => {
+        const regex = new RegExp(`\\b(${palavra})\\b`, "gi");
+        texto = texto.replace(regex, '<span>$1</span>');
+      });
+
+      paragrafo.innerHTML = texto;
+    });
+
+    function mostrarAlerta() {
+      alert("Você está na aba que irá falar sobre um dos projetos que fiz.");
+    }
+  </script>
+
+</body>
+</html>
